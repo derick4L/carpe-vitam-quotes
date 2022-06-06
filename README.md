@@ -18,3 +18,7 @@ I framed this project was a way for me to share words of encouragement to those 
 
 1. Ability to share to more social sites and SMS
 2. Expanded User profile
+
+### Tech Stack
+
+React, SASS, CSS & Firebase
