@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.post-modal-container {
+  position: fixed;
+
+  .post-modal {
+    background: #fff;
+    width: 62%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, 0, -100%);
+    z-index: 1000;
+
+    .post-modal-close-button {
+      position: absolute;
+      width: 165px;
+      border: 1.3px solid #000;
+      background: none;
+      padding: 5px;
+      font-size: 17px;
+      font-family: "Montserrat", "sans-serif";
+      transform: translateX(140px);
+      top: 20px;
+
+      &:hover {
+        cursor: pointer;
+        background: #fe5e41;
+        transition: 0.2s ease-in-out;
+        color: #ffff;
+      }
+    }
+  }
+}

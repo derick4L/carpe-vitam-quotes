@@ -1,0 +1,13 @@
+.quotes-list-container {
+  display: grid;
+  grid-template-columns: 61px auto;
+  height: 100%;
+
+  .quotes-list-img-container {
+    background-color: #283845;
+    height: 100%;
+    cursor: default;
+    display: flex;
+    align-items: flex-end;
+  }
+}

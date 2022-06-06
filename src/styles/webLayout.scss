@@ -1,0 +1,14 @@
+.web-layout {
+  display: grid;
+  grid-template-columns: 4.5% 95.5%;
+  cursor: default;
+
+  .web-title-container {
+    display: contents;
+
+    #webImg {
+      height: 100vh;
+      background-color: #c8e9a0;
+    }
+  }
+}

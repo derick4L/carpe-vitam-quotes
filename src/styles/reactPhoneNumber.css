@@ -1,0 +1,25 @@
+.PhoneInputCountry {
+  font-size: 43px;
+  justify-content: center;
+}
+
+.PhoneInputInput {
+  font-family: "Montserrat", "sans-serif";
+  padding: 5px;
+  font-size: 18px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+  border-bottom: 1px solid #c8e9a0;
+  transition: 0.15s ease-in-out;
+}
+
+.PhoneInputInput::placeholder {
+  font-size: 13px;
+}

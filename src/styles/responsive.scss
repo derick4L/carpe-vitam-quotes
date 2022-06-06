@@ -1,0 +1,241 @@
+@media only screen and (max-width: 470px) {
+  //Web Layout
+  .web-layout {
+    grid-template-columns: 16% auto;
+  }
+
+  // Main
+  .main-hero-container {
+    .main-message-carousel-container {
+      .main-message-frame {
+        overflow: hidden;
+        .main-message-carousel {
+          margin: 0 0 0 80px;
+        }
+      }
+    }
+
+    .main-layout-content {
+      height: 360px;
+    }
+
+    .main-action-buttons-container {
+      height: 100px;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        width: 208px;
+        font-size: 20px;
+        padding: 6px;
+      }
+    }
+  }
+
+  //Quotes Cycler
+  .quotes-cycler-container {
+    margin: 88px 30px 80px 0 !important;
+
+    .quotes-cycler-quote {
+      font-size: 30px !important;
+    }
+    .quotes-cycler-quote-author {
+      font-size: 35px !important;
+
+      .quotes-cycler-author-first-name {
+        margin: 0 9px 0 0;
+      }
+    }
+
+    .quotes-cycler-controls-container {
+      .quotes-cycler-actions-container {
+        width: 100%;
+        justify-content: flex-end;
+        .quotes-cycler-refresh-button {
+          font-weight: 300;
+
+          font-size: 20px;
+
+          svg {
+            font-size: 63px !important;
+          }
+          p {
+            display: none;
+          }
+        }
+        .quotes-cycler-share-container {
+          align-items: center;
+
+          .quotes-cycler-share-buttons {
+            button {
+              &:hover {
+                transform: scale(1.2);
+                transition: 0.2s ease-in-out;
+              }
+
+              svg {
+                height: 58px;
+                width: 58px;
+              }
+            }
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  //New Quote Modal
+
+  .post-modal-container {
+    .post-modal {
+      width: 100%;
+
+      .post-modal-close-button {
+        top: 80px;
+        font-size: 16px;
+        transform: translateX(100px);
+      }
+    }
+  }
+
+  //New Quote Form
+  .new-quote-form-container {
+    .new-quote-form {
+      margin: 80px 0 0 0;
+      .first-last-name-group {
+        display: flex;
+        flex-direction: column;
+        height: 20%;
+        margin: 0;
+        text-align: center;
+
+        .first-name,
+        .last-name {
+          input {
+            font-size: 19px;
+            border-bottom: 1px solid #000;
+            font-family: "Montserrat", "sans-serif";
+            width: 290px;
+            margin: 0 0 0 20px;
+          }
+
+          label {
+            font-weight: 300;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .quote-input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+
+        textarea {
+          padding: 20px 0 10px 0;
+          font-size: 16px;
+          height: 120px;
+        }
+
+        label {
+          font-weight: 300;
+          font-size: 20px;
+        }
+      }
+
+      .new-quote-action-buttons {
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        align-items: center;
+
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  //Auth
+  .auth-layout-content {
+    #sign-in-button {
+      width: 204px !important;
+      border: 1.3px solid #000;
+      background: none;
+      padding: 5px;
+      font-size: 17px;
+      font-family: "Montserrat", "sans-serif";
+      margin: 30px 0 0 0;
+
+      &:hover {
+        cursor: pointer;
+        background: #c8e9a0;
+        transition: 0.2s ease-in-out;
+      }
+    }
+
+    .auth-form-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 0 25px;
+      align-items: center !important;
+
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .auth-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .auth-passcode-group {
+          #passcode-input {
+            font-size: 23px !important;
+          }
+        }
+
+        .error-code {
+          margin: 15px 0 0 0;
+          color: #ed0e0e;
+          font-size: 18px;
+          width: 250px;
+        }
+      }
+    }
+  }
+  //React Phone Number Package CSS
+  .PhoneInput {
+    flex-direction: column;
+  }
+  .PhoneInputCountry {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .PhoneInputInput {
+    font-size: 23px;
+    margin: 15px 0 0 0;
+  }
+
+  .PhoneInputInput:focus {
+    outline: none;
+    border-bottom: 1px solid #c8e9a0;
+    transition: 0.15s ease-in-out;
+  }
+
+  .PhoneInputInput::placeholder {
+    font-size: 12px;
+  }
+
+  .PhoneInputCountrySelectArrow {
+    display: none;
+  }
+}

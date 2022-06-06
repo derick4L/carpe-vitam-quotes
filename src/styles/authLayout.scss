@@ -1,0 +1,111 @@
+.auth-layout-content {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", "sans-serif";
+
+  height: 100vh;
+
+  #send-code-button {
+    width: 165px;
+    border: 1.3px solid #000;
+    background: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Montserrat", "sans-serif";
+    margin: 30px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      background: #c8e9a0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  #sign-in-button {
+    width: 165px;
+    border-style: solid;
+    border-width: 1.3px;
+    border-color: #000;
+    background: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Montserrat", "sans-serif";
+    margin: 30px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      background: #c8e9a0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  #back-button {
+    width: 165px;
+    border-style: solid;
+    border-width: 1.3px;
+    border-color: #000;
+    background: none;
+    padding: 5px;
+    font-size: 17px;
+    font-family: "Montserrat", "sans-serif";
+    margin: 65px 0 0 0;
+
+    &:hover {
+      cursor: pointer;
+      background: #c8e9a0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  .auth-form-container {
+    display: flex;
+    flex-direction: column;
+
+    .auth-form {
+      margin: 50px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      width: 100%;
+
+      .auth-phone-number-group,
+      .auth-passcode-group {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0 0 0;
+        width: 100%;
+        text-align: center;
+
+        #phone-input,
+        #passcode-input {
+          cursor: pointer;
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          border-bottom: 1px solid #000;
+          font-size: 18px;
+          font-family: "Montserrat", sans-serif;
+          text-align: center;
+
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid #c8e9a0;
+            transition: 0.15s ease-in-out;
+          }
+        }
+
+        label {
+          margin: 5.5px 0 0 0;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+
+      .error-code {
+        margin: 15px 0 0 0;
+        color: #ed0e0e;
+      }
+    }
+  }
+}
