@@ -6,7 +6,7 @@ Inspirational quotes to reflect on and share.
 
 Hey y'all,
 
-I framed this project was a way for me to share words of encouragement to those going through struggle. As someone who appreciates a boost of motivation, I created this web application as a way for others to share that same energy. I hope you enjoy this app and share with someone in need of positivity. I welcome tips and/or collaboration, please feel free to reach out to my email --> <dmvmills@icloud.com>.
+I framed this project was a way for me to share words of encouragement to those going through struggle. As someone who appreciates a boost of motivation, I created this web application as a way for others to share that same energy. I hope you enjoy this app and share with someone in need of positivity. I welcome criticsm and collaboration, so please feel free to reach out to my email --> <dmvmills@icloud.com>.
 
 ### Features
 
