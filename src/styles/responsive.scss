@@ -2,6 +2,11 @@
   //Web Layout
   .web-layout {
     grid-template-columns: 16% auto;
+    .web-title-container {
+      #webImg {
+        height: 100vh;
+      }
+    }
   }
 
   // Main

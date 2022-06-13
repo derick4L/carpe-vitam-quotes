@@ -61,14 +61,14 @@ const QuotesCycler = () => {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <FacebookShareButton
-                      url={""}
+                      url={"https://www.carpevitamquotes.com"}
                       quote={`"${quote}" - ${authorFirstName} ${authorLastName}`}
                     >
                       <FacebookIcon size="39px" />
                     </FacebookShareButton>
                     <TwitterShareButton
                       title={`"${quote}" - ${authorFirstName} ${authorLastName}`}
-                      url={""}
+                      url={"https://www.carpevitamquotes.com"}
                     >
                       <TwitterIcon size="39px" />
                     </TwitterShareButton>
