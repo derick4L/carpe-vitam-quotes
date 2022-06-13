@@ -113,7 +113,13 @@ const NewQuoteForm = () => {
               Clear
             </button>
           </div>
-          {sentQuote ? <p className="sent-banner">Quote Sent!</p> : null}
+          {sentQuote ? (
+            <p className="sent-banner">
+              Quote Sent!
+              <br />
+              Go back to see your quote at random.
+            </p>
+          ) : null}
           {invalid ? (
             <p className="invalid-banner">
               Enter in the fields above.
