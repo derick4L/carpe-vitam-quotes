@@ -10,10 +10,7 @@ import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
 const QuotesCycler = () => {
   const { quotes } = useContext(DataContext);
 
-  //pulls in the context data set by parent component
-
   const [{ id, quote, authorFirstName, authorLastName }] = quotes;
-  //destructured the elements within the quotesInfo array
 
   const [signedIn, setSignedIn] = useState("");
 

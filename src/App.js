@@ -17,10 +17,6 @@ import "./styles/main.scss";
 export const DataContext = createContext();
 
 const App = () => {
-  //TO DO:
-  //Build error handling for OTP verification
-  //Finish responsive styling
-
   const [quotesInfo, setQuotesInfo] = useState("");
   const [authUser, setAuthUser] = useState(localStorage.getItem("user"));
 
@@ -36,7 +32,6 @@ const App = () => {
       setQuotesInfo(
         quotesArray[Math.floor(Math.random() * quotesArray.length)]
       );
-      //sets and randomizes the array info
     };
     getQuotesFromDB();
     // eslint-disable-next-line
