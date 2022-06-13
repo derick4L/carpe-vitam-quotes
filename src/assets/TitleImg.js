@@ -19,7 +19,7 @@ const TitleImg = () => {
       </defs>
       <text
         clipPath="url(#TextBounds)"
-        fontFamily="MontserratRoman-SemiBold"
+        fontFamily="Montserrat"
         fontSize="100"
         transform="rotate(90.067 59.302 54.558)"
       >
