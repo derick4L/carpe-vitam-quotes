@@ -1,5 +1,6 @@
 # Carpe Vitam Quotes
 
+CARPE VITAM "SEIZE LIFE"
 Inspirational quotes to reflect on and share.
 
 ## Overview
