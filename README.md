@@ -3,7 +3,10 @@
 CARPE VITAM "SEIZE LIFE"
 Inspirational quotes to reflect on and share.
 
-(Revamping this app in honor of ***National Suicide Week --- September 4 thru 10***)
+Revamping this app in honor of 
+***National Suicide Prevention Week (SEP 4 - 10)*** 
+& 
+***Mental Health Awareness Week (OCT 2 - 8)***
 
 ## Overview
 
