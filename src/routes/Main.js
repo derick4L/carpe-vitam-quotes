@@ -7,6 +7,7 @@ import PostModal from "../components/PostModal";
 
 import { DataContext } from "../App";
 import NewQuoteForm from "../components/NewQuoteForm";
+import Footer from "../components/Footer";
 
 const Main = () => {
   let navigate = useNavigate();
@@ -53,6 +54,7 @@ const Main = () => {
         ) : (
           <>
             <button onClick={() => togglePost()}>Post New Quote</button>
+            <button onClick={() => alert("I work!")}>Quote Search</button>
             <button
               onClick={() =>
                 window.confirm("Are you sure you want to sign out?") &&
@@ -64,6 +66,7 @@ const Main = () => {
           </>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

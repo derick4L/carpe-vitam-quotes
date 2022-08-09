@@ -54,7 +54,7 @@ const AuthForm = () => {
       }, "33000");
     } else {
       window.confirmationResult.confirm(userCode).then((result) => {
-        localStorage.setItem("user", result.user);
+        localStorage.setItem("user", result.user.toJSON().phoneNumber);
         navigate("/");
       });
     }
@@ -64,7 +64,7 @@ const AuthForm = () => {
     <div className="auth-layout-content">
       <div className="auth-form-container">
         <h1>
-          Sign In via OTP
+          Sign In Via OTP
           <br />
           (One Time Passcode)
         </h1>

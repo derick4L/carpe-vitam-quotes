@@ -1,0 +1,17 @@
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  .footer-container {
+    font-family: "Roboto Condensed", "sans-serif";
+    font-weight: 300;
+
+    .footer-links {
+      list-style: none;
+      .footer-link {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
