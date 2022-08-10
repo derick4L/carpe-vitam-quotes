@@ -14,6 +14,8 @@ const Main = () => {
 
   const { user } = useContext(DataContext);
 
+  const [docTitle, setDocTitle] = useState("");
+
   const [authUser, setAuthUser] = user;
 
   const [openPost, setOpenPost] = useState(false);
@@ -29,10 +31,13 @@ const Main = () => {
   };
 
   useEffect(() => {
+    setDocTitle((document.title = "Home | Quotes To Inspire & Share"));
+
     let currentUser = localStorage.getItem("user");
     setAuthUser(currentUser);
+
     // eslint-disable-next-line
-  }, [authUser]);
+  }, [authUser, docTitle]);
 
   return (
     <div className="main-hero-container">
@@ -50,7 +55,9 @@ const Main = () => {
       </div>
       <div className="main-action-buttons-container">
         {authUser === undefined || authUser === null ? (
-          <button onClick={() => navigate("/auth")}>Sign In To Post</button>
+          <button onClick={() => navigate("/auth")}>
+            Sign In To Post & Share
+          </button>
         ) : (
           <>
             <button onClick={() => togglePost()}>Post New Quote</button>
