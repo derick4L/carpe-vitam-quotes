@@ -19,10 +19,10 @@ This application was born from the desire to share words of encouragement to tho
 1. Quick and easy sign-in process using one-time passcode (OTP).
 2. Post quotes to Twitter and Facebook.
 3. Minimalist modern style.
+4. Suicide | Mental Awareness Resource Links.
 
 ### Planned updates
 
 1. Ability to share to more social sites and SMS.
-3. Search for quotes.
-4. Images for notable figures.
-5. Footer links to resources & national hotline.
+2. Search for quotes.
+3. Images for notable figures.
