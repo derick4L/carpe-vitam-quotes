@@ -6,31 +6,44 @@ import { FacebookIcon, TwitterIcon } from "react-share";
 import { DataContext } from "../App";
 
 import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
+import { Panel } from "rsuite";
 
 const QuotesCycler = () => {
-  const { quotes } = useContext(DataContext);
+  const { quotes, images } = useContext(DataContext);
 
   const [{ id, quote, authorFirstName, authorLastName }] = quotes;
+  // const { [0] } = images;
 
   const [signedIn, setSignedIn] = useState("");
 
   useEffect(() => {
     let currentUser = localStorage.getItem("user");
     setSignedIn(currentUser);
+
     // eslint-disable-next-line
   }, [signedIn]);
 
   return (
     <div className="quotes-cycler-container" loading="lazy">
-      <div key={id}>
-        <div className="quotes-cycler-quote">{quote}</div>
-        <div className="quotes-cycler-quote-author">
-          <div className="quotes-cycler-author-first-name">
-            {authorFirstName}
+      <Panel bordered>
+        <div key={id}>
+          <div className="quotes-cycler-quote">{quote}</div>
+          <div className="quotes-cycler-quote-author">
+            <div className="quotes-cycler-author-first-name">
+              {authorFirstName}
+            </div>
+            <div className="quotes-cycler-author-last-name">
+              {authorLastName}
+            </div>
+            {images !== null ? (
+              <img
+                src={images[0]}
+                alt={`${authorFirstName} ${authorLastName} pic`}
+              />
+            ) : null}
           </div>
-          <div className="quotes-cycler-author-last-name">{authorLastName}</div>
         </div>
-      </div>
+      </Panel>
       <div className="quotes-cycler-controls-container">
         <div className="quotes-cycler-actions-container">
           {signedIn === null ? (
@@ -53,10 +66,8 @@ const QuotesCycler = () => {
                   />
                   <p>REFRESH</p>
                 </div>
-                <div style={{ width: "115px", textAlign: "center" }}>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
+                <div className="quotes-cycler-social-container">
+                  <div className="quotes-cycler-social-buttons">
                     <FacebookShareButton
                       url={"https://www.carpevitamquotes.com"}
                       quote={`"${quote}" - ${authorFirstName} ${authorLastName}`}

@@ -1,11 +1,10 @@
 .web-layout {
   display: grid;
-  grid-template-columns: 4.5% 95.5%;
+  grid-template-columns: auto 95%;
   cursor: default;
 
   .web-title-container {
-    display: contents;
-
+    display: flex;
     #webImg {
       height: 100vh;
       background-color: #c8e9a0;

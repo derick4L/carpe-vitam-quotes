@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 import QuotesCycler from "../components/QuotesCycler";
 import HeroMessageCarousel from "../components/HeroMessageCarousel";
 import PostModal from "../components/PostModal";
+import NewQuoteForm from "../components/NewQuoteForm";
+// import Footer from "../components/Footer";
+
+import { Button } from "rsuite";
 
 import { DataContext } from "../App";
-import NewQuoteForm from "../components/NewQuoteForm";
-import Footer from "../components/Footer";
 
 const Main = () => {
   let navigate = useNavigate();
@@ -55,9 +57,7 @@ const Main = () => {
       </div>
       <div className="main-action-buttons-container">
         {authUser === undefined || authUser === null ? (
-          <button onClick={() => navigate("/auth")}>
-            Sign In To Post & Share
-          </button>
+          <Button onClick={() => navigate("/auth")}>Sign In To Share</Button>
         ) : (
           <>
             <button onClick={() => togglePost()}>Post New Quote</button>
@@ -73,7 +73,7 @@ const Main = () => {
           </>
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

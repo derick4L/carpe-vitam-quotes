@@ -5,6 +5,14 @@
   margin: 50px 50px 50px 0;
 
   .quotes-cycler-quote {
+    &::before {
+      content: '"';
+    }
+
+    &::after {
+      content: '"';
+    }
+
     text-align: end;
     font-size: 32px;
     font-family: "Montserrat", sans-serif;
@@ -20,6 +28,9 @@
 
     .quotes-cycler-author-first-name {
       margin: 0 9px 0 0;
+    }
+    .quotes-cycler-author-last-name {
+      margin: 0;
     }
   }
 
@@ -70,6 +81,15 @@
               transition: 0.2s ease-in-out;
             }
           }
+        }
+        .quotes-cycler-social-container {
+          width: 115px;
+          text-align: center;
+        }
+        .quotes-cycler-social-buttons {
+          display: flex;
+          justify-content: space-evenly;
+          // width: 100%;
         }
       }
     }
