@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
-import { FacebookShareButton, TwitterShareButton } from "react-share";
-import { FacebookIcon, TwitterIcon } from "react-share";
+import { RedditShareButton, TwitterShareButton } from "next-share";
+import { RedditIcon, TwitterIcon } from "next-share";
 
 import { DataContext } from "../App";
 
@@ -23,25 +23,29 @@ const QuotesCycler = () => {
   }, [signedIn]);
 
   return (
-    <div className="quotes-cycler-container" loading="lazy">
+    <>
       <Panel bordered>
-        <div key={id}>
-          <div className="quotes-cycler-quote">{quote}</div>
-          <div className="quotes-cycler-quote-author">
-            <div className="quotes-cycler-author-first-name">
-              {authorFirstName}
-            </div>
-            <div className="quotes-cycler-author-last-name">
-              {authorLastName}
+        <div className="quotes-cycler-container">
+          <div className="quotes-cycler-quote-author-image-container" key={id}>
+            {image !== null || image !== "" ? (
+              <img
+                className="quotes-cycler-author-image"
+                src={image}
+                alt={`${authorFirstName} ${authorLastName} pic`}
+              />
+            ) : null}
+            <div className="quotes-cycler-quote-author-group">
+              <div className="quotes-cycler-quote">{quote}</div>
+              <div className="quotes-cycler-quote-author">
+                <div className="quotes-cycler-author-first-name">
+                  {authorFirstName}
+                </div>
+                <div className="quotes-cycler-author-last-name">
+                  {authorLastName}
+                </div>
+              </div>
             </div>
           </div>
-          {image !== null || image !== "" ? (
-            <img
-              className="quotes-cycler-author-image"
-              src={image}
-              alt={`${authorFirstName} ${authorLastName} pic`}
-            />
-          ) : null}
         </div>
       </Panel>
       <div className="quotes-cycler-controls-container">
@@ -68,17 +72,17 @@ const QuotesCycler = () => {
                 </div>
                 <div className="quotes-cycler-social-container">
                   <div className="quotes-cycler-social-buttons">
-                    <FacebookShareButton
+                    <RedditShareButton
+                      title={`"${quote}" - ${authorFirstName} ${authorLastName}.`}
                       url={"https://www.carpevitamquotes.com"}
-                      quote={`"${quote}" - ${authorFirstName} ${authorLastName}`}
                     >
-                      <FacebookIcon size="39px" />
-                    </FacebookShareButton>
+                      <RedditIcon size={39} borderRadius={10} />
+                    </RedditShareButton>
                     <TwitterShareButton
                       title={`"${quote}" - ${authorFirstName} ${authorLastName}`}
                       url={"https://www.carpevitamquotes.com"}
                     >
-                      <TwitterIcon size="39px" />
+                      <TwitterIcon size={39} borderRadius={10} />
                     </TwitterShareButton>
                   </div>
                   <p>SHARE</p>
@@ -88,7 +92,7 @@ const QuotesCycler = () => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default QuotesCycler;

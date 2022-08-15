@@ -3,6 +3,8 @@
   flex-direction: column;
   height: 100%;
 
+  // .main-hero-header {
+  //   display: flex;
   .main-message-carousel-container {
     .main-message-frame {
       overflow: hidden;
@@ -14,7 +16,6 @@
           font-size: 25px;
           line-height: 29px;
           align-items: flex-start;
-          width: 100%;
 
           .main-message-pretext {
             display: flex;
@@ -40,60 +41,66 @@
         }
       }
     }
-
-    @keyframes rotate {
-      0%,
-      24% {
-        transform: translateY(0);
-      }
-
-      25%,
-      49% {
-        transform: translateY(25px * -1.5);
-      }
-
-      50%,
-      74% {
-        transform: translateY(25px * -3);
-      }
-
-      75%,
-      99% {
-        transform: translateY(25px * -4.5);
-      }
-
-      100% {
-        transform: translateY(25px * -6);
-      }
-    }
-  }
-
-  .main-action-buttons-container {
-    display: flex;
-    flex-direction: column;
-
-    button {
-      width: 165px;
-      border-style: solid;
-      border-width: 1.3px;
-      font-size: 17px;
-      font-family: "Montserrat", "sans-serif";
-      background: none;
-      padding: 5px;
-
-      &:hover {
-        color: #ffff;
-        cursor: pointer;
-        background: #c8e9a0;
-        transition: 0.2s ease-in-out;
-      }
-    }
+    // }
   }
 }
 
 .main-layout-content {
   display: flex;
+  flex-direction: column;
   place-items: center;
 
   font-family: "Montserrat", "sans-serif";
+}
+
+.main-action-buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  button {
+    width: 165px;
+    height: 50px;
+    border-style: solid;
+    border-width: 1.3px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-family: "Montserrat", "sans-serif";
+    background: none;
+
+    padding: 5px;
+
+    &:hover {
+      color: #ffff;
+      cursor: pointer;
+      background: #c8e9a0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+@keyframes rotate {
+  0%,
+  24% {
+    transform: translateY(0);
+  }
+
+  25%,
+  49% {
+    transform: translateY(25px * -1.5);
+  }
+
+  50%,
+  74% {
+    transform: translateY(25px * -3);
+  }
+
+  75%,
+  99% {
+    transform: translateY(25px * -4.5);
+  }
+
+  100% {
+    transform: translateY(25px * -6);
+  }
 }

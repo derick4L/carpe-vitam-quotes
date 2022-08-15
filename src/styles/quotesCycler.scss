@@ -2,100 +2,104 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 50px 50px 50px 0;
 
-  .quotes-cycler-quote {
-    &::before {
-      content: '"';
-    }
-
-    &::after {
-      content: '"';
-    }
-
-    text-align: end;
-    font-size: 32px;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .quotes-cycler-quote-author {
+  .quotes-cycler-quote-author-image-container {
     display: flex;
-    margin: 8px 0 0 0;
-    font-weight: 300;
-    font-size: 43px;
+    align-items: center;
+    justify-content: center;
+
+    .quotes-cycler-quote-author-group {
+      .quotes-cycler-quote {
+        &::before {
+          content: '"';
+        }
+
+        &::after {
+          content: '"';
+        }
+
+        text-align: left;
+        font-size: 28px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .quotes-cycler-quote-author {
+        display: flex;
+        margin: 8px 0 0 0;
+        font-weight: 300;
+        font-size: 43px;
+        letter-spacing: -2px;
+
+        .quotes-cycler-author-first-name {
+          margin: 0 9px 0 0;
+        }
+        .quotes-cycler-author-last-name {
+          margin: 0;
+        }
+      }
+    }
+
+    .quotes-cycler-author-image {
+      height: 470px;
+      width: auto;
+    }
+  }
+}
+.quotes-cycler-controls-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Condensed", sans-serif;
+  align-items: flex-end;
+
+  .quotes-cycler-actions-container {
+    display: flex;
     justify-content: flex-end;
-    letter-spacing: -2px;
 
-    .quotes-cycler-author-first-name {
-      margin: 0 9px 0 0;
-    }
-    .quotes-cycler-author-last-name {
-      margin: 0;
-    }
-  }
+    margin: 10px 0 0 0;
 
-  .quotes-cycler-author-image {
-    height: 250px;
-    width: auto;
-  }
+    width: 100%;
 
-  .quotes-cycler-controls-container {
-    display: flex;
-    flex-direction: column;
-    font-family: "Roboto Condensed", sans-serif;
-    align-items: flex-end;
-
-    .quotes-cycler-actions-container {
+    .quotes-cycler-refresh-button {
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
+      align-items: center;
+      font-weight: normal;
 
-      margin: 25px 0 0 0;
+      svg {
+        cursor: pointer;
+        font-size: 43px;
 
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.2s ease-in-out;
+          color: #c8e9a0;
+        }
+      }
+    }
+    .quotes-cycler-share-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       width: 100%;
 
-      .quotes-cycler-refresh-button {
+      .quotes-cycler-share-buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: normal;
-
-        svg {
-          cursor: pointer;
-          font-size: 43px;
-
+        width: 240px;
+        justify-content: space-evenly;
+        button {
           &:hover {
             transform: scale(1.2);
             transition: 0.2s ease-in-out;
-            color: #c8e9a0;
           }
         }
       }
-      .quotes-cycler-share-container {
+      .quotes-cycler-social-container {
+        width: 115px;
+        text-align: center;
+      }
+      .quotes-cycler-social-buttons {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-
-        .quotes-cycler-share-buttons {
-          display: flex;
-          width: 240px;
-          justify-content: space-evenly;
-          button {
-            &:hover {
-              transform: scale(1.2);
-              transition: 0.2s ease-in-out;
-            }
-          }
-        }
-        .quotes-cycler-social-container {
-          width: 115px;
-          text-align: center;
-        }
-        .quotes-cycler-social-buttons {
-          display: flex;
-          justify-content: space-evenly;
-          // width: 100%;
-        }
+        justify-content: space-evenly;
       }
     }
   }
