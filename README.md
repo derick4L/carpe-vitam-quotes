@@ -17,7 +17,7 @@ This application was born from the desire to share words of encouragement to tho
 ### Current Features
 
 1. Quick and easy sign-in process using one-time passcode (OTP).
-2. Post quotes to Twitter and Facebook.
+2. Post quotes to Twitter and Reddit.
 3. Minimalist modern style.
 4. Suicide | Mental Awareness Resource Links.
 
