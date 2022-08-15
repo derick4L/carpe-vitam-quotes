@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState, createContext } from "react";
-import { db, storageRef } from "./firebase.config";
-import { getDownloadURL, ref } from "firebase/storage";
+import { db } from "./firebase.config";
 import { collection, getDocs } from "firebase/firestore";
 
 import Main from "./routes/Main";
@@ -22,7 +21,6 @@ export const DataContext = createContext();
 
 const App = () => {
   const [quotesInfo, setQuotesInfo] = useState("");
-  const [authorImages, setAuthorImages] = useState("");
   const [authUser, setAuthUser] = useState(localStorage.getItem("user"));
 
   const dbReference = collection(db, "currentQuotes");
@@ -39,17 +37,8 @@ const App = () => {
       );
     };
 
-    const getImages = async () => {
-      const imagesData = ref(storageRef);
-      await getDownloadURL(imagesData).then((url) => {
-        setAuthorImages(url);
-      });
-
-      console.log(imagesData);
-    };
-
     getQuotesFromDB();
-    getImages();
+
     // eslint-disable-next-line
   }, []);
 
@@ -59,7 +48,7 @@ const App = () => {
         <DataContext.Provider
           value={{
             quotes: [quotesInfo, setQuotesInfo],
-            images: [authorImages, setAuthorImages],
+            // image: [authorImage, setAuthorImage],
             user: [authUser, setAuthUser],
           }}
         >

@@ -1,3 +1,6 @@
 .rs-panel-bordered {
   border: 1px solid #575757;
 }
+.rs-panel-body {
+  padding: 5px;
+}

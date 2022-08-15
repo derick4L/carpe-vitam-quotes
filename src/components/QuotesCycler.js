@@ -9,10 +9,9 @@ import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
 import { Panel } from "rsuite";
 
 const QuotesCycler = () => {
-  const { quotes, images } = useContext(DataContext);
+  const { quotes } = useContext(DataContext);
 
-  const [{ id, quote, authorFirstName, authorLastName }] = quotes;
-  // const { [0] } = images;
+  const [{ id, quote, authorFirstName, authorLastName, image }] = quotes;
 
   const [signedIn, setSignedIn] = useState("");
 
@@ -35,13 +34,14 @@ const QuotesCycler = () => {
             <div className="quotes-cycler-author-last-name">
               {authorLastName}
             </div>
-            {images !== null ? (
-              <img
-                src={images[0]}
-                alt={`${authorFirstName} ${authorLastName} pic`}
-              />
-            ) : null}
           </div>
+          {image !== null || image !== "" ? (
+            <img
+              className="quotes-cycler-author-image"
+              src={image}
+              alt={`${authorFirstName} ${authorLastName} pic`}
+            />
+          ) : null}
         </div>
       </Panel>
       <div className="quotes-cycler-controls-container">
