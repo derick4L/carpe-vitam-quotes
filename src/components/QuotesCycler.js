@@ -1,26 +1,13 @@
-import { useContext, useEffect, useState } from "react";
-
-import { RedditShareButton, TwitterShareButton } from "next-share";
-import { RedditIcon, TwitterIcon } from "next-share";
+import { useContext } from "react";
 
 import { DataContext } from "../App";
 
-import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
 import { Panel } from "rsuite";
 
 const QuotesCycler = () => {
   const { quotes } = useContext(DataContext);
 
   const [{ id, quote, authorFirstName, authorLastName, image }] = quotes;
-
-  const [signedIn, setSignedIn] = useState("");
-
-  useEffect(() => {
-    let currentUser = localStorage.getItem("user");
-    setSignedIn(currentUser);
-
-    // eslint-disable-next-line
-  }, [signedIn]);
 
   return (
     <>
@@ -48,50 +35,6 @@ const QuotesCycler = () => {
           </div>
         </div>
       </Panel>
-      <div className="quotes-cycler-controls-container">
-        <div className="quotes-cycler-actions-container">
-          {signedIn === null ? (
-            <div className="quotes-cycler-refresh-button">
-              <RefreshRoundedIcon
-                onClick={() => {
-                  window.location.reload();
-                }}
-              />
-              <p>REFRESH</p>
-            </div>
-          ) : (
-            <div className="quotes-cycler-share-container">
-              <div className="quotes-cycler-share-buttons">
-                <div className="quotes-cycler-refresh-button">
-                  <RefreshRoundedIcon
-                    onClick={() => {
-                      window.location.reload();
-                    }}
-                  />
-                  <p>REFRESH</p>
-                </div>
-                <div className="quotes-cycler-social-container">
-                  <div className="quotes-cycler-social-buttons">
-                    <RedditShareButton
-                      title={`"${quote}" - ${authorFirstName} ${authorLastName}.`}
-                      url={"https://www.carpevitamquotes.com"}
-                    >
-                      <RedditIcon size={39} borderRadius={10} />
-                    </RedditShareButton>
-                    <TwitterShareButton
-                      title={`"${quote}" - ${authorFirstName} ${authorLastName}`}
-                      url={"https://www.carpevitamquotes.com"}
-                    >
-                      <TwitterIcon size={39} borderRadius={10} />
-                    </TwitterShareButton>
-                  </div>
-                  <p>SHARE</p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
     </>
   );
 };
