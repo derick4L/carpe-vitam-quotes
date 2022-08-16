@@ -93,7 +93,7 @@ const Main = () => {
                     window.location.reload();
                   }}
                 />
-                <p>Refresh</p>
+                <p>REFRESH</p>
               </div>
               <div className="main-action-social-share-group">
                 <div className="main-action-share-buttons">
@@ -116,7 +116,7 @@ const Main = () => {
                     <FacebookMessengerIcon size={60} borderRadius={10} />
                   </FacebookMessengerShareButton>
                 </div>
-                <p className="main-action-share-text">Share</p>
+                <p className="main-action-share-text">SHARE</p>
               </div>
             </div>
           </div>

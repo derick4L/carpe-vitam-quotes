@@ -31,6 +31,28 @@
               align-items: flex-start;
               animation: rotate 8s ease-in-out infinite;
 
+              p {
+                background: rgb(200, 233, 160);
+                background: -moz-linear-gradient(
+                  241deg,
+                  rgba(200, 233, 160, 1) 6%,
+                  rgba(254, 94, 65, 1) 100%
+                );
+                background: -webkit-linear-gradient(
+                  241deg,
+                  rgba(200, 233, 160, 1) 6%,
+                  rgba(254, 94, 65, 1) 100%
+                );
+                background: linear-gradient(
+                  241deg,
+                  rgba(200, 233, 160, 1) 6%,
+                  rgba(254, 94, 65, 1) 100%
+                );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8e9a0",endColorstr="#fe5e41",GradientType=1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+
               .main-message-action-word {
                 font-weight: 600;
               }
@@ -39,7 +61,6 @@
         }
       }
     }
-    // }
   }
 }
 
@@ -93,12 +114,12 @@
       display: flex;
       align-items: center;
       width: 30%;
-
       .main-action-refresh-group {
         font-size: 17px;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         svg {
           font-size: 68px;
           &:hover {
@@ -107,6 +128,10 @@
             transition: 0.1s ease-in-out;
             cursor: pointer;
           }
+        }
+
+        p {
+          font-family: "Roboto Condensed";
         }
       }
       .main-action-social-share-group {
@@ -118,6 +143,7 @@
         width: 100%;
         .main-action-share-text {
           font-size: 17px;
+          font-family: "Roboto Condensed";
         }
         .main-action-share-buttons {
           display: flex;

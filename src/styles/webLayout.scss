@@ -5,9 +5,25 @@
 
   .web-title-container {
     display: flex;
-    #webImg {
+    svg {
       height: 100vh;
-      background-color: #c8e9a0;
+      background: rgb(200, 233, 160);
+      background: -moz-linear-gradient(
+        157deg,
+        rgba(200, 233, 160, 1) 31%,
+        rgba(254, 94, 65, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        157deg,
+        rgba(200, 233, 160, 1) 31%,
+        rgba(254, 94, 65, 1) 100%
+      );
+      background: linear-gradient(
+        157deg,
+        rgba(200, 233, 160, 1) 31%,
+        rgba(254, 94, 65, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8e9a0",endColorstr="#fe5e41",GradientType=1);
     }
   }
 }

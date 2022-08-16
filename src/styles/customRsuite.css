@@ -1,11 +1,28 @@
 .rs-panel {
   width: 95%;
+  filter: drop-shadow(8px 9px 10px rgb(111, 111, 111));
+  background: rgb(200, 233, 160);
+  background: -moz-linear-gradient(
+    315deg,
+    rgba(200, 233, 160, 1) 10%,
+    rgba(254, 94, 65, 1) 76%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    rgba(200, 233, 160, 1) 10%,
+    rgba(254, 94, 65, 1) 76%
+  );
+  background: linear-gradient(
+    315deg,
+    rgba(200, 233, 160, 1) 10%,
+    rgba(254, 94, 65, 1) 76%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8e9a0",endColorstr="#fe5e41",GradientType=1);
 }
 
 .rs-panel-bordered {
-  border: 1px solid #575757;
+  border: none;
 }
 .rs-panel-body {
-  /* position: relative; */
   padding: 8px;
 }

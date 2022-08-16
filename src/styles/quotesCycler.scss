@@ -18,17 +18,24 @@
           content: '"';
         }
 
-        text-align: left;
-        font-size: 28px;
-        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 30px;
+
+        font-family: "Roboto Condensed";
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        padding: 8px;
       }
 
       .quotes-cycler-quote-author {
         display: flex;
         margin: 8px 0 0 0;
-        font-weight: 300;
-        font-size: 43px;
+        font-size: 40px;
         letter-spacing: -2px;
+        color: #ffff;
+        border-radius: 10px;
+        padding: 5px;
+        justify-content: center;
 
         .quotes-cycler-author-first-name {
           margin: 0 9px 0 0;
@@ -42,6 +49,7 @@
     .quotes-cycler-author-image {
       height: 470px;
       width: auto;
+      transform: translate(-10px, 25px);
     }
   }
 }

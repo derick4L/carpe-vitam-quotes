@@ -48,7 +48,6 @@ const App = () => {
         <DataContext.Provider
           value={{
             quotes: [quotesInfo, setQuotesInfo],
-            // image: [authorImage, setAuthorImage],
             user: [authUser, setAuthUser],
           }}
         >
