@@ -85,6 +85,7 @@
     border-radius: 8px;
     font-size: 17px;
     font-family: "Montserrat", "sans-serif";
+    background-color: none;
     background: none;
 
     padding: 10px;
@@ -92,12 +93,39 @@
     &:hover {
       color: #ffff;
       cursor: pointer;
-      background: #c8e9a0;
+      background-color: #c8e9a0;
       transition: 0.2s ease-in-out;
+      // border: none;
     }
   }
 
   .main-action-buttons-null {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: space-evenly;
+    margin: 20px 0 0 0;
+
+    .main-action-refresh-group {
+      font-size: 17px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        font-size: 68px;
+        &:hover {
+          color: #c8e9a0;
+          transform: scale(1.2);
+          transition: 0.1s ease-in-out;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        font-family: "Roboto Condensed";
+      }
+    }
   }
   .main-action-buttons-signedin {
     margin: 20px 0 0 0;

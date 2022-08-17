@@ -1,8 +1,7 @@
 import { useContext } from "react";
+import { Panel } from "rsuite";
 
 import { DataContext } from "../App";
-
-import { Panel } from "rsuite";
 
 const QuotesCycler = () => {
   const { quotes } = useContext(DataContext);
@@ -14,13 +13,13 @@ const QuotesCycler = () => {
       <Panel bordered>
         <div className="quotes-cycler-container">
           <div className="quotes-cycler-quote-author-image-container" key={id}>
-            {image !== null || image !== "" ? (
+            {image === null || image === "" ? null : (
               <img
-                className="quotes-cycler-author-image"
+                className="quotes-cycler-author-image loading"
                 src={image}
                 alt={`${authorFirstName} ${authorLastName} pic`}
               />
-            ) : null}
+            )}
             <div className="quotes-cycler-quote-author-group">
               <div className="quotes-cycler-quote">{quote}</div>
               <div className="quotes-cycler-quote-author">

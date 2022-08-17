@@ -31,7 +31,7 @@ const Main = () => {
 
   const [openPost, setOpenPost] = useState(false);
 
-  const [{ id, quote, authorFirstName, authorLastName, image }] = quotes;
+  const [{ quote, authorFirstName, authorLastName }] = quotes;
 
   const togglePost = () => {
     setOpenPost(!openPost);
@@ -69,8 +69,15 @@ const Main = () => {
       <div className="main-action-buttons-container">
         {authUser === undefined || authUser === null ? (
           <div className="main-action-buttons-null">
-            <RefreshRounded />
             <Button onClick={() => navigate("/auth")}>Sign In To Share</Button>
+            <div className="main-action-refresh-group">
+              <RefreshRounded
+                onClick={() => {
+                  window.location.reload();
+                }}
+              />
+              <p>REFRESH</p>
+            </div>
           </div>
         ) : (
           <div className="main-action-buttons-signedin">

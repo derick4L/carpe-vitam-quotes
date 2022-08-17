@@ -8,6 +8,16 @@
     align-items: center;
     justify-content: center;
 
+    .quotes-cycler-author-image {
+      height: 400px;
+      width: auto;
+      transform: translate(-10px, 25px);
+
+      .loading {
+        animation: pageLoading 1s linear infinite alternate;
+      }
+    }
+
     .quotes-cycler-quote-author-group {
       .quotes-cycler-quote {
         &::before {
@@ -45,11 +55,14 @@
         }
       }
     }
+  }
+}
 
-    .quotes-cycler-author-image {
-      height: 470px;
-      width: auto;
-      transform: translate(-10px, 25px);
-    }
+@keyframes pageLoading {
+  0% {
+    background-color: #cdcdcd;
+  }
+  100% {
+    background-color: #f5f5f5;
   }
 }
