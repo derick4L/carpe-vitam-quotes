@@ -2,20 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 400px;
 
   .quotes-cycler-quote-author-image-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 
     .quotes-cycler-author-image {
       height: 400px;
       width: auto;
       transform: translate(-10px, 25px);
-
-      .loading {
-        animation: pageLoading 1s linear infinite alternate;
-      }
     }
 
     .quotes-cycler-quote-author-group {
@@ -32,7 +30,7 @@
         font-size: 30px;
 
         font-family: "Roboto Condensed";
-        background-color: #f5f5f5;
+        color: #ffff;
         border-radius: 10px;
         padding: 8px;
       }
@@ -54,6 +52,11 @@
           margin: 0;
         }
       }
+    }
+    .quotes-cycler-social-share {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
   }
 }

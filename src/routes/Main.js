@@ -1,14 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { RefreshRounded } from "@mui/icons-material";
-import {
-  RedditShareButton,
-  RedditIcon,
-  TwitterIcon,
-  TwitterShareButton,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
-} from "next-share";
 
 import QuotesCycler from "../components/QuotesCycler";
 import HeroMessageCarousel from "../components/HeroMessageCarousel";
@@ -23,15 +15,15 @@ import { DataContext } from "../App";
 const Main = () => {
   let navigate = useNavigate();
 
-  const { quotes, user } = useContext(DataContext);
-
-  const [docTitle, setDocTitle] = useState("");
+  const { user } = useContext(DataContext);
 
   const [authUser, setAuthUser] = user;
 
+  const [docTitle, setDocTitle] = useState("");
+
   const [openPost, setOpenPost] = useState(false);
 
-  const [{ quote, authorFirstName, authorLastName }] = quotes;
+  // const [{ quote, authorFirstName, authorLastName }] = quotes;
 
   const togglePost = () => {
     setOpenPost(!openPost);
@@ -101,29 +93,6 @@ const Main = () => {
                   }}
                 />
                 <p>REFRESH</p>
-              </div>
-              <div className="main-action-social-share-group">
-                <div className="main-action-share-buttons">
-                  <TwitterShareButton
-                    title={`${quote} - ${authorFirstName} ${authorLastName}`}
-                    url={`https://carpevitamquotes.com`}
-                  >
-                    <TwitterIcon size={60} borderRadius={10} />
-                  </TwitterShareButton>
-                  <RedditShareButton
-                    title={`${quote} - ${authorFirstName} ${authorLastName}`}
-                    url={`https://carpevitamquotes.com`}
-                  >
-                    <RedditIcon size={60} borderRadius={10} />
-                  </RedditShareButton>
-                  <FacebookMessengerShareButton
-                    quote={`${quote} - ${authorFirstName} ${authorLastName}`}
-                    url={`https://carpevitamquotes.com`}
-                  >
-                    <FacebookMessengerIcon size={60} borderRadius={10} />
-                  </FacebookMessengerShareButton>
-                </div>
-                <p className="main-action-share-text">SHARE</p>
               </div>
             </div>
           </div>

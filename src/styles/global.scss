@@ -8,6 +8,30 @@ h2,
 h3,
 h4,
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.loading-container {
+  display: grid;
+  place-content: center;
+  height: 350px;
+
+  .loading-spinner {
+    border: 7px solid;
+    border-color: #c8e9a0 transparent #c8e9a0 transparent;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    animation: spinning 1s linear infinite;
+  }
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
