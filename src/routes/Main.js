@@ -23,7 +23,14 @@ const Main = () => {
 
   const [openPost, setOpenPost] = useState(false);
 
-  // const [{ quote, authorFirstName, authorLastName }] = quotes;
+  useEffect(() => {
+    setDocTitle((document.title = "Home | Quotes To Inspire & Share"));
+
+    let currentUser = localStorage.getItem("user");
+    setAuthUser(currentUser);
+
+    // eslint-disable-next-line
+  }, [authUser, docTitle]);
 
   const togglePost = () => {
     setOpenPost(!openPost);
@@ -35,20 +42,11 @@ const Main = () => {
     window.location.reload();
   };
 
-  useEffect(() => {
-    setDocTitle((document.title = "Home | Quotes To Inspire & Share"));
-
-    let currentUser = localStorage.getItem("user");
-    setAuthUser(currentUser);
-
-    // eslint-disable-next-line
-  }, [authUser, docTitle]);
-
   return (
     <div className="main-hero-container">
       <HeroMessageCarousel />
       <div className="main-layout-content">
-        <QuotesCycler user={user} />
+        <QuotesCycler />
         <PostModal
           openPost={openPost}
           onClose={() => {

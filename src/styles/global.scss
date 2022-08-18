@@ -16,14 +16,36 @@ p {
   display: grid;
   place-content: center;
   height: 350px;
+  width: 300px;
 
   .loading-spinner {
-    border: 7px solid;
+    border: 11px solid;
     border-color: #c8e9a0 transparent #c8e9a0 transparent;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 75px;
+    height: 75px;
     animation: spinning 1s linear infinite;
+  }
+}
+
+.loading-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+  .loading-quote-text {
+    animation: pulsing 1.2s linear infinite;
+    background: #c8e9a0;
+    height: 30px;
+    border-radius: 10px;
+    width: 475px;
+  }
+  .loading-author-text {
+    animation: pulsing 1.2s linear infinite;
+    background: #c8e9a0;
+    height: 40px;
+    border-radius: 10px;
+    width: 70%;
   }
 }
 
@@ -33,5 +55,16 @@ p {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    border-radius: 10px;
+    background-color: #c8e9a0;
+  }
+  100% {
+    border-radius: 10px;
+    background-color: #a9c883;
   }
 }

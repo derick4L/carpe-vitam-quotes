@@ -1,5 +1,5 @@
 .rs-panel {
-  width: 95%;
+  width: 82%;
   filter: drop-shadow(8px 9px 10px rgb(111, 111, 111));
   background: rgb(200, 233, 160);
   background: -moz-linear-gradient(
@@ -20,9 +20,10 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8e9a0",endColorstr="#fe5e41",GradientType=1);
 }
 
+.rs-panel-body {
+  padding: 5px;
+}
+
 .rs-panel-bordered {
   border: none;
-}
-.rs-panel-body {
-  padding: 8px;
 }
