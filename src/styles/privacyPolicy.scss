@@ -1,0 +1,45 @@
+.privacy-policy-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  padding: 15px;
+
+  .privacy-policy-heading-button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .privacy-policy-heading {
+    color: #fe5e41;
+  }
+
+  .privacy-policy-subheading {
+    color: #7b7b7b;
+  }
+
+  button {
+    height: 50px;
+    width: 120px;
+    border-style: solid;
+    border-width: 1.3px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-family: "Montserrat", "sans-serif";
+    background: none;
+    align-self: center;
+
+    padding: 10px;
+
+    &:hover {
+      color: #ffff;
+      cursor: pointer;
+      background-color: #c8e9a0;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}

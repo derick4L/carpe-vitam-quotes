@@ -6,7 +6,7 @@ import QuotesCycler from "../components/QuotesCycler";
 import HeroMessageCarousel from "../components/HeroMessageCarousel";
 import PostModal from "../components/PostModal";
 import NewQuoteForm from "../components/NewQuoteForm";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 
 import { Button } from "rsuite";
 
@@ -96,7 +96,7 @@ const Main = () => {
           </div>
         )}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
