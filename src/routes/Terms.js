@@ -98,7 +98,7 @@ const Terms = () => {
               from{" "}
               <a
                 href="https://carpevitamquotes.com"
-                rel="external nofollow noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 https://carpevitamquotes.com

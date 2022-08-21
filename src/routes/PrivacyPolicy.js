@@ -134,7 +134,7 @@ const PrivacyPolicy = () => {
               from{" "}
               <a
                 href="https://carpevitamquotes.com"
-                rel="external nofollow noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 https://carpevitamquotes.com
@@ -219,7 +219,7 @@ const PrivacyPolicy = () => {
             disabling, or deleting local shared objects?&quot; available at{" "}
             <a
               href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-              rel="external nofollow noopener"
+              rel="noreferrer"
               target="_blank"
             >
               https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
@@ -243,6 +243,7 @@ const PrivacyPolicy = () => {
           <a
             href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking"
             target="_blank"
+            rel="noreferrer"
           >
             Privacy Policies website
           </a>{" "}
@@ -521,8 +522,8 @@ const PrivacyPolicy = () => {
               the Privacy Policy of Google:{" "}
               <a
                 href="https://www.google.com/intl/en/policies/privacy/"
-                rel="external nofollow noopener"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www.google.com/intl/en/policies/privacy/
               </a>
