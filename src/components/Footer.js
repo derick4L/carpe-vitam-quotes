@@ -1,8 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-import MentalHealthAwarenessRibbon from "../assets/MentalHealthAwarenessRibbon";
-import SuicideAwarenessRibbon from "../assets/SuicideAwarenessRibbon";
-
 import "../styles/footer.scss";
 
 const Footer = () => {
@@ -12,17 +9,6 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div className="footer-container">
-          <div className="awareness-content">
-            <>
-              <span className="awareness-icon">
-                <SuicideAwarenessRibbon />
-              </span>
-              <p>Speak with someone now - dial 988 (USA)</p>
-              <span className="awareness-icon">
-                <MentalHealthAwarenessRibbon />
-              </span>
-            </>
-          </div>
           <ul className="footer-links">
             <li className="footer-link">
               <a
