@@ -7,11 +7,11 @@
   .quotes-cycler-quote-author-image-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
 
     .quotes-cycler-author-image {
-      height: 400px;
+      height: 320px;
       width: auto;
       transform: translate(-10px, 25px);
     }
@@ -27,7 +27,7 @@
         }
 
         text-align: center;
-        font-size: 25px;
+        font-size: 32px;
 
         font-family: "Roboto Condensed";
         color: #ffff;
@@ -38,7 +38,7 @@
       .quotes-cycler-quote-author {
         display: flex;
         margin: 8px 0 0 0;
-        font-size: 36px;
+        font-size: 35px;
         letter-spacing: -2px;
         color: #ffff;
         border-radius: 10px;
@@ -58,7 +58,11 @@
       flex-direction: column;
       justify-content: space-evenly;
       height: 100%;
-      width: 13%;
+
+      button {
+        width: 63px;
+        height: 63px;
+      }
 
       svg {
         &:hover {

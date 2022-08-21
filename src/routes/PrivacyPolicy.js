@@ -1,8 +1,18 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "rsuite";
 
 const PrivacyPolicy = () => {
+  const [docTitle, setDocTitle] = useState("");
+
   let navigate = useNavigate();
+
+  useEffect(() => {
+    setDocTitle(
+      (document.title = "Privacy Policy | Quotes To Inspire & Share")
+    );
+  }, [docTitle]);
+
   return (
     <>
       <div className="privacy-policy-content">
