@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticate } from "../firebase.config";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { Button } from "rsuite";
 import PhoneInput from "react-phone-number-input";
 
 import "react-phone-number-input/style.css";
@@ -99,28 +100,28 @@ const AuthForm = () => {
           ) : null}
 
           {valid === true ? (
-            <button
+            <Button
               type="submit"
               id="send-code-button"
               onClick={() => validateCode()}
             >
               Validate Code
-            </button>
+            </Button>
           ) : (
-            <button type="submit" id="send-code-button">
+            <Button type="submit" id="send-code-button">
               Send Code
-            </button>
+            </Button>
           )}
         </form>
 
-        <button
+        <Button
           id="back-button"
           onClick={() => {
             navigate("/");
           }}
         >
           Go Back
-        </button>
+        </Button>
       </div>
       <div id="recaptcha"></div>
     </div>

@@ -3,7 +3,7 @@
     display: grid !important;
     grid-template-columns: 15% 85% !important;
   }
-
+  //main page
   .main-hero-container {
     justify-content: space-evenly !important;
     height: 95% !important;
@@ -114,6 +114,68 @@
       .footer-copyright {
         font-size: 10px !important;
       }
+    }
+  }
+
+  //auth page
+  .auth-form-container {
+    align-items: center !important;
+    h1 {
+      font-size: 24px !important;
+      line-height: 25px !important;
+    }
+
+    .auth-phone-number-group {
+      height: 100px !important;
+      .PhoneInput {
+        flex-direction: column !important;
+        height: 100% !important;
+
+        .PhoneInputCountry {
+          margin: 0 0 8px 0 !important;
+        }
+
+        .PhoneInputInput {
+          width: 100% !important;
+        }
+      }
+    }
+
+    #back-button {
+      margin: 30px 0 0 0 !important;
+    }
+  }
+
+  //privacy policy & terms
+  .privacy-policy-content {
+    .privacy-policy-heading-button-group {
+      width: 100% !important;
+      .privacy-policy-heading {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+    }
+
+    .privacy-policy-heading,
+    .privacy-policy-subheading {
+      font-size: 22px !important;
+      line-height: 30px !important;
+    }
+  }
+
+  .terms-content {
+    .terms-heading-button-group {
+      width: 100% !important;
+      .terms-heading {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+    }
+
+    .terms-heading,
+    .terms-subheading {
+      font-size: 22px !important;
+      line-height: 30px !important;
     }
   }
 }

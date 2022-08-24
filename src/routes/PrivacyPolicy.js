@@ -209,7 +209,7 @@ const PrivacyPolicy = () => {
             our Service. Unless you have adjusted Your browser setting so that
             it will refuse Cookies, our Service may use Cookies.
           </li>
-          <li>
+          {/* <li>
             <strong>Flash Cookies.</strong> Certain features of our Service may
             use local stored objects (or Flash Cookies) to collect and store
             information about Your preferences or Your activity on our Service.
@@ -224,7 +224,7 @@ const PrivacyPolicy = () => {
             >
               https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
             </a>
-          </li>
+          </li> */}
           <li>
             <strong>Web Beacons.</strong> Certain sections of our Service and
             our emails may contain small electronic files known as web beacons
@@ -517,7 +517,7 @@ const PrivacyPolicy = () => {
               The reCAPTCHA service may collect information from You and from
               Your Device for security purposes.
             </p>
-            <p>
+            {/* <p>
               The information gathered by reCAPTCHA is held in accordance with
               the Privacy Policy of Google:{" "}
               <a
@@ -527,7 +527,7 @@ const PrivacyPolicy = () => {
               >
                 https://www.google.com/intl/en/policies/privacy/
               </a>
-            </p>
+            </p> */}
           </li>
         </ul>
         <h3 className="privacy-policy-subheading">Children's Privacy</h3>
