@@ -45,29 +45,20 @@ const QuotesCycler = () => {
       <Panel bordered>
         <div className="quotes-cycler-container">
           <div className="quotes-cycler-quote-author-image-container" key={id}>
-            {image === null || image === "" ? null : (
+            {loading ? (
+              <div className="loading-container">
+                <div className="loading-spinner"></div>
+              </div>
+            ) : (
               <>
-                {loading ? (
-                  <div className="loading-container">
-                    <div className="loading-spinner"></div>
-                  </div>
-                ) : (
+                {" "}
+                {image === null || image === "" ? null : (
                   <img
                     className="quotes-cycler-author-image"
                     src={image}
                     alt={`${authorFirstName} ${authorLastName} pic`}
                   />
                 )}
-              </>
-            )}
-            {loading ? (
-              <div className="loading-text-container">
-                <div className="loading-quote-text"></div>
-                <div className="loading-quote-text"></div>
-                <div className="loading-author-text"></div>
-              </div>
-            ) : (
-              <>
                 <div className="quotes-cycler-quote-author-group">
                   <div className="quotes-cycler-quote">{quote}</div>
 
@@ -79,7 +70,7 @@ const QuotesCycler = () => {
                       {authorLastName}
                     </div>
                   </div>
-                </div>
+                </div>{" "}
               </>
             )}
             <>
