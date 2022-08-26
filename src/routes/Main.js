@@ -47,15 +47,15 @@ const Main = () => {
       <HeroMessageCarousel />
       <div className="main-layout-content">
         <QuotesCycler />
-        <PostModal
-          openPost={openPost}
-          onClose={() => {
-            setOpenPost(false);
-          }}
-        >
-          <NewQuoteForm />
-        </PostModal>
       </div>
+      <PostModal
+        openPost={openPost}
+        onClose={() => {
+          setOpenPost(false);
+        }}
+      >
+        <NewQuoteForm />
+      </PostModal>
       <div className="main-action-buttons-container">
         {authUser === undefined || authUser === null ? (
           <div className="main-action-buttons-null">
@@ -73,7 +73,7 @@ const Main = () => {
           <div className="main-action-buttons-signedin">
             <div className="main-action-buttons-first-group">
               <Button onClick={() => togglePost()}>Post New Quote</Button>
-              <Button onClick={() => alert("I work!")}>Quote Search</Button>
+              {/* <Button onClick={() => alert("I work!")}>Quote Search</Button> */}
               <Button
                 onClick={() =>
                   window.confirm("Are you sure you want to sign out?") &&

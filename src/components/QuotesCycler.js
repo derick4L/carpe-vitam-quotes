@@ -2,8 +2,6 @@ import { useEffect, useState, useContext } from "react";
 import { Panel } from "rsuite";
 import { collection, getDocs } from "firebase/firestore";
 import {
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
   TwitterShareButton,
   TwitterIcon,
   RedditShareButton,
@@ -88,12 +86,6 @@ const QuotesCycler = () => {
                   >
                     <RedditIcon size={63} borderRadius={10} />
                   </RedditShareButton>
-                  <FacebookMessengerShareButton
-                    appId={"455528796477801"}
-                    url={`https://carpevitamquotes.com`}
-                  >
-                    <FacebookMessengerIcon size={63} borderRadius={10} />
-                  </FacebookMessengerShareButton>
                 </div>
               )}
             </>

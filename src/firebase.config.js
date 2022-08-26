@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getStorage, ref } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -13,10 +12,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-const storage = getStorage();
-export const storageRef = ref(storage, "authors/eleanor-roosevelt.webp");
-
 export const db = getFirestore(app, {
   experimentalForceLongPolling: true,
   useFetchStreams: false,
