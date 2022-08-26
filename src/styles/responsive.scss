@@ -178,6 +178,42 @@
       line-height: 30px !important;
     }
   }
+
+  //new quote modal
+  .post-modal {
+    width: 100% !important;
+
+    .post-modal-close-button {
+      transform: translateX(95px) !important;
+      font-size: 15px !important;
+    }
+
+    .new-quote-form-container {
+      .new-quote-form {
+        .first-last-name-group {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+        .quote-input-group {
+          textarea {
+            font-size: 15px !important;
+          }
+        }
+        .new-quote-action-buttons {
+          display: flex;
+          flex-direction: column !important;
+          align-items: center !important;
+          margin: 0 !important;
+          height: 120px !important;
+          justify-content: space-around !important;
+
+          .post-quote-button {
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) and (max-width: 1024px) {
