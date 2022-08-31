@@ -8,7 +8,10 @@
     height: 100%;
     cursor: default;
     display: flex;
-    align-items: flex-end;
+
+    svg {
+      height: 100%;
+    }
   }
 
   .new-quote-form {
@@ -42,14 +45,14 @@
           border-top: none;
           border-left: none;
           border-right: none;
-          border-bottom: 1px solid #000;
+          border-bottom: 1.3px solid #878787;
           font-family: "Montserrat", "sans-serif";
           width: 220px;
           text-align: center;
 
           &:focus {
             outline: none;
-            border-bottom: 1px solid #fe5e41;
+            border-bottom: 1.3px solid #fe5e41;
           }
         }
 
@@ -66,12 +69,12 @@
       margin: 0 55px 60px 55px;
 
       textarea {
-        padding: 20px 0 0 0;
+        padding: 20px 0 20px 0;
         font-size: 16px;
-        border-top: 1px solid #000;
+        border-top: 1.3px solid #878787;
         border-left: none;
         border-right: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1.3px solid #878787;
         font-family: "Montserrat", "sans-serif";
         text-align: center;
         max-height: 200px;
@@ -92,19 +95,24 @@
       display: flex;
       justify-content: space-around;
       margin: 0 0 55px 0;
+
       button {
-        width: 165px;
-        border: 1.3px solid #000;
-        background: none;
-        padding: 5px;
+        border: 1.3px solid #878787;
+        color: #878787;
+        border-radius: 8px;
         font-size: 17px;
         font-family: "Montserrat", "sans-serif";
+        background-color: none;
+        background: none;
+
+        padding: 10px;
 
         &:hover {
-          cursor: pointer;
-          background: #fe5e41;
-          transition: 0.2s ease-in-out;
           color: #ffff;
+          border: 1.3px solid #c8e9a0;
+          cursor: pointer;
+          background-color: #c8e9a0;
+          transition: 0.2s ease-in-out;
         }
       }
     }

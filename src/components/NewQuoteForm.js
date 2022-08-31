@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { db } from "../firebase.config";
 import { doc, setDoc, collection } from "firebase/firestore";
+import { Button } from "rsuite";
 
 import NewQuoteImg from "../assets/NewQuoteImg";
 
@@ -70,7 +71,7 @@ const NewQuoteForm = () => {
                 onChange={(e) => setAuthorFirstName(e.target.value)}
                 required
               />
-              <label>First Name | M.I. (opt.)</label>
+              <label>First Name & M.I. (opt.)</label>
             </div>
             <div className="last-name">
               <input
@@ -94,7 +95,7 @@ const NewQuoteForm = () => {
             <label>Quote</label>
           </div>
           <div className="new-quote-action-buttons">
-            <button
+            <Button
               className="post-quote-button"
               type="submit"
               onClick={(e) => {
@@ -102,8 +103,8 @@ const NewQuoteForm = () => {
               }}
             >
               Post Quote
-            </button>
-            <button
+            </Button>
+            <Button
               className="post-quote-button"
               type="submit"
               onClick={(e) => {
@@ -111,7 +112,7 @@ const NewQuoteForm = () => {
               }}
             >
               Clear
-            </button>
+            </Button>
           </div>
           {sentQuote ? (
             <p className="sent-banner">

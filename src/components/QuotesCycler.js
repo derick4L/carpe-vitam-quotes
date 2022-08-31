@@ -1,83 +1,98 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Panel } from "rsuite";
+import { collection, getDocs } from "firebase/firestore";
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  RedditShareButton,
+  RedditIcon,
+} from "next-share";
 
-import { FacebookShareButton, TwitterShareButton } from "react-share";
-import { FacebookIcon, TwitterIcon } from "react-share";
-
+import { db } from "../firebase.config";
 import { DataContext } from "../App";
 
-import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
-
 const QuotesCycler = () => {
-  const { quotes } = useContext(DataContext);
+  const { user } = useContext(DataContext);
+  const dbReference = collection(db, "currentQuotes");
 
-  const [{ id, quote, authorFirstName, authorLastName }] = quotes;
+  const [quotesInfo, setQuotesInfo] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  const [signedIn, setSignedIn] = useState("");
+  const { id, quote, authorFirstName, authorLastName, image } = quotesInfo;
 
   useEffect(() => {
-    let currentUser = localStorage.getItem("user");
-    setSignedIn(currentUser);
+    const getQuotesFromDB = async () => {
+      const quotesData = await getDocs(dbReference);
+      const quotesArray = quotesData.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setQuotesInfo(
+        quotesArray[Math.floor(Math.random() * quotesArray.length)]
+      );
+      setLoading(false);
+    };
+
+    getQuotesFromDB();
+
     // eslint-disable-next-line
-  }, [signedIn]);
+  }, []);
 
   return (
-    <div className="quotes-cycler-container" loading="lazy">
-      <div key={id}>
-        <div className="quotes-cycler-quote">{quote}</div>
-        <div className="quotes-cycler-quote-author">
-          <div className="quotes-cycler-author-first-name">
-            {authorFirstName}
-          </div>
-          <div className="quotes-cycler-author-last-name">{authorLastName}</div>
-        </div>
-      </div>
-      <div className="quotes-cycler-controls-container">
-        <div className="quotes-cycler-actions-container">
-          {signedIn === null ? (
-            <div className="quotes-cycler-refresh-button">
-              <RefreshRoundedIcon
-                onClick={() => {
-                  window.location.reload();
-                }}
-              />
-              <p>REFRESH</p>
-            </div>
-          ) : (
-            <div className="quotes-cycler-share-container">
-              <div className="quotes-cycler-share-buttons">
-                <div className="quotes-cycler-refresh-button">
-                  <RefreshRoundedIcon
-                    onClick={() => {
-                      window.location.reload();
-                    }}
-                  />
-                  <p>REFRESH</p>
-                </div>
-                <div style={{ width: "115px", textAlign: "center" }}>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <FacebookShareButton
-                      url={"https://www.carpevitamquotes.com"}
-                      quote={`"${quote}" - ${authorFirstName} ${authorLastName}`}
-                    >
-                      <FacebookIcon size="39px" />
-                    </FacebookShareButton>
-                    <TwitterShareButton
-                      title={`"${quote}" - ${authorFirstName} ${authorLastName}`}
-                      url={"https://www.carpevitamquotes.com"}
-                    >
-                      <TwitterIcon size="39px" />
-                    </TwitterShareButton>
-                  </div>
-                  <p>SHARE</p>
-                </div>
+    <>
+      <Panel bordered>
+        <div className="quotes-cycler-container">
+          <div className="quotes-cycler-quote-author-image-container" key={id}>
+            {loading ? (
+              <div className="loading-container">
+                <div className="loading-spinner"></div>
               </div>
-            </div>
-          )}
+            ) : (
+              <>
+                {" "}
+                {image === null || image === "" ? null : (
+                  <img
+                    className="quotes-cycler-author-image"
+                    src={image}
+                    alt={`${authorFirstName} ${authorLastName} pic`}
+                  />
+                )}
+                <div className="quotes-cycler-quote-author-group">
+                  <div className="quotes-cycler-quote">{quote}</div>
+
+                  <div className="quotes-cycler-quote-author">
+                    <div className="quotes-cycler-author-first-name">
+                      {authorFirstName}
+                    </div>
+                    <div className="quotes-cycler-author-last-name">
+                      {authorLastName}
+                    </div>
+                  </div>
+                </div>{" "}
+              </>
+            )}
+            <>
+              {user[0] === null ? null : (
+                <div className="quotes-cycler-social-share">
+                  <TwitterShareButton
+                    title={`${quote} - ${authorFirstName} ${authorLastName}`}
+                    url={`https://carpevitamquotes.com`}
+                  >
+                    <TwitterIcon size={63} borderRadius={10} />
+                  </TwitterShareButton>
+                  <RedditShareButton
+                    title={`${quote} - ${authorFirstName} ${authorLastName}`}
+                    url={`https://carpevitamquotes.com`}
+                  >
+                    <RedditIcon size={63} borderRadius={10} />
+                  </RedditShareButton>
+                </div>
+              )}
+            </>
+          </div>
         </div>
-      </div>
-    </div>
+      </Panel>
+    </>
   );
 };
 export default QuotesCycler;

@@ -1,3 +1,5 @@
+import { Button } from "rsuite";
+
 import "../styles/postModal.scss";
 
 const PostModal = ({ openPost, onClose, children }) => {
@@ -8,9 +10,9 @@ const PostModal = ({ openPost, onClose, children }) => {
       <div className="overlay" />
       <div className="post-modal-container">
         <div className="post-modal">
-          <button className="post-modal-close-button" onClick={onClose}>
+          <Button className="post-modal-close-button" onClick={onClose}>
             Cancel
-          </button>
+          </Button>
           {children}
         </div>
       </div>

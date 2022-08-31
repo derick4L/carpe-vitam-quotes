@@ -1,10 +1,10 @@
-import TitleImg from "../../assets/TitleImg";
+import WebImg from "../../assets/WebImg";
 
 const WebLayout = ({ children }) => {
   return (
     <div className="web-layout">
       <div className="web-title-container">
-        <TitleImg />
+        <WebImg />
       </div>
       {children}
     </div>
