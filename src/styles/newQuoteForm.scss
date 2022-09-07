@@ -29,8 +29,8 @@
     .first-last-name-group {
       display: flex;
       width: 100%;
-      justify-content: space-around;
-      margin: 0 0 50px 0;
+      justify-content: space-evenly;
+      margin: 0 0 30px 0;
       text-align: center;
 
       .first-name,
@@ -42,17 +42,15 @@
         input {
           padding: 3px;
           font-size: 15px;
-          border-top: none;
-          border-left: none;
-          border-right: none;
-          border-bottom: 1.3px solid #878787;
+          border: 1px solid #878787;
+          border-radius: 10px;
           font-family: "Montserrat", "sans-serif";
           width: 220px;
           text-align: center;
 
           &:focus {
             outline: none;
-            border-bottom: 1.3px solid #fe5e41;
+            border: 1.3px solid #fe5e41;
           }
         }
 
@@ -71,18 +69,15 @@
       textarea {
         padding: 20px 0 20px 0;
         font-size: 16px;
-        border-top: 1.3px solid #878787;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1.3px solid #878787;
+        border: 1px solid #878787;
+        border-radius: 7px;
         font-family: "Montserrat", "sans-serif";
         text-align: center;
         max-height: 200px;
 
         &:focus {
           outline: none;
-          border-top: 1px solid #fe5e41;
-          border-bottom: 1px solid #fe5e41;
+          border: 1px solid #fe5e41;
         }
       }
 
