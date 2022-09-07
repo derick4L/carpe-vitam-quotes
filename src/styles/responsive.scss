@@ -5,8 +5,7 @@
   }
   //main page
   .main-hero-container {
-    justify-content: space-evenly !important;
-    height: 95% !important;
+    justify-content: space-between !important;
     .main-message-carousel-container {
       margin: 10px 0 0 0 !important;
       .main-message-frame {
@@ -107,7 +106,7 @@
 
   .footer {
     .footer-container {
-      width: 77% !important;
+      width: 91% !important;
       .footer-links {
         font-size: 12px !important;
       }
@@ -255,6 +254,22 @@
     }
     img {
       display: none;
+    }
+  }
+}
+
+@media (min-width: 890px) and (max-width: 1024px) {
+  .web-layout .web-title-container svg {
+    height: 100%;
+  }
+
+  .quotes-cycler-container {
+    height: 230px !important;
+  }
+
+  .footer {
+    .footer-container {
+      width: 90% !important;
     }
   }
 }
