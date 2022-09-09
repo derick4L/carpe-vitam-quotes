@@ -11,6 +11,8 @@ import Footer from "../components/Footer";
 import { Button } from "rsuite";
 
 import { DataContext } from "../App";
+import SearchModal from "../components/SearchModal";
+import QuotesSearch from "../components/QuoteSearch";
 
 const Main = () => {
   let navigate = useNavigate();
@@ -22,6 +24,7 @@ const Main = () => {
   const [docTitle, setDocTitle] = useState("");
 
   const [openPost, setOpenPost] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
 
   useEffect(() => {
     setDocTitle((document.title = "Home | Quotes To Inspire & Share"));
@@ -34,6 +37,10 @@ const Main = () => {
 
   const togglePost = () => {
     setOpenPost(!openPost);
+  };
+
+  const toggleSearch = () => {
+    setOpenSearch(!openSearch);
   };
 
   const signOut = () => {
@@ -56,6 +63,15 @@ const Main = () => {
       >
         <NewQuoteForm />
       </PostModal>
+
+      <SearchModal
+        openSearch={openSearch}
+        onClose={() => {
+          setOpenSearch(false);
+        }}
+      >
+        <QuotesSearch />
+      </SearchModal>
       <div className="main-action-buttons-container">
         {authUser === undefined || authUser === null ? (
           <div className="main-action-buttons-null">
@@ -73,7 +89,7 @@ const Main = () => {
           <div className="main-action-buttons-signedin">
             <div className="main-action-buttons-first-group">
               <Button onClick={() => togglePost()}>Post New Quote</Button>
-              {/* <Button onClick={() => alert("I work!")}>Quote Search</Button> */}
+              <Button onClick={() => toggleSearch()}>Quote Search</Button>
               <Button
                 onClick={() =>
                   window.confirm("Are you sure you want to sign out?") &&

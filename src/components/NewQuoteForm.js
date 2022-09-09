@@ -63,6 +63,7 @@ const NewQuoteForm = () => {
           <NewQuoteImg />
         </div>
         <form onSubmit={postQuotes} className="new-quote-form">
+          <h3 className="new-quote-form-heading">Add A New Quote</h3>
           <div className="first-last-name-group">
             <div className="first-name">
               <input
@@ -125,7 +126,7 @@ const NewQuoteForm = () => {
             <p className="invalid-banner">
               Enter in the fields above.
               <br />
-              Must have a first and last name.
+              Author must have a first and last name.
               <br />
               Quote must be atleast 5 characters long.
             </p>

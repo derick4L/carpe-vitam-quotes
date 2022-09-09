@@ -34,7 +34,6 @@ const QuotesCycler = () => {
     };
 
     getQuotesFromDB();
-
     // eslint-disable-next-line
   }, []);
 

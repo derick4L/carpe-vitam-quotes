@@ -1,0 +1,21 @@
+.quote-search-container {
+  display: grid;
+  grid-template-columns: 61px auto;
+  height: 100%;
+
+  .quote-search-img-container {
+    background-color: #c8e9a0;
+    height: 100%;
+    cursor: default;
+    display: flex;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  .quote-search-form-container {
+    display: grid;
+    place-content: center;
+  }
+}
